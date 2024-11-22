@@ -1,0 +1,52 @@
+.timeline {
+    position: relative;
+    margin: 50px 0;
+    padding: 10px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: #000;
+    transform: translateX(-50%);
+}
+
+.timeline-content {
+    position: relative;
+    width: 45%;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 5px;
+}
+
+.timeline-content.left {
+    left: 5%;
+}
+
+.timeline-content.right {
+    left: 50%;
+}
+
+.timeline-content h4, .timeline-content p {
+    margin: 0;
+    padding: 5px 0;
+}
+
+.timeline-item:nth-child(odd) .timeline-content.left {
+    left: 5%;
+}
+
+.timeline-item:nth-child(even) .timeline-content.right {
+    left: 50%;
+}
