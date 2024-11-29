@@ -653,8 +653,8 @@ progress {
   content: "— ";
 }
 .img-fluid {
-  max-width: 100%;
-  height: 100%;
+  width: 100%;
+  height: auto;
 }
 .img-thumbnail {
   padding: 0.25rem;
