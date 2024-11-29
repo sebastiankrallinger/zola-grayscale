@@ -1,15 +1,10 @@
 .timeline {
     position: relative;
     margin: 50px 0;
-    padding: 10px;
+    padding: 10px 0;
 }
 
-.timeline-item {
-    position: relative;
-    margin-bottom: 30px;
-}
-
-.timeline-item::before {
+.timeline::before {
     content: '';
     position: absolute;
     left: 50%;
@@ -18,35 +13,47 @@
     height: 100%;
     background-color: #000;
     transform: translateX(-50%);
+    z-index: 1;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
 }
 
 .timeline-content {
     position: relative;
     width: 45%;
-    padding: 10px;
+    padding: 20px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 5px;
+    z-index: 2;
 }
 
 .timeline-content.left {
-    left: 5%;
+    left: 0;
+    text-align: center;
 }
 
 .timeline-content.right {
-    left: 50%;
+    left: 55%;
 }
 
-.timeline-content h4, .timeline-content p {
+.timeline-content h4,
+.timeline-content p {
     margin: 0;
     padding: 5px 0;
 }
 
-.timeline-item:nth-child(odd) .timeline-content.left {
-    left: 5%;
-}
+@media (max-width: 768px) {
+    .timeline-content {
+        width: 90%;
+        left: 5%;
+        text-align: center;
+    }
 
-.timeline-item:nth-child(even) .timeline-content.right {
-    left: 50%;
+    .timeline-content.right {
+        left: 5%;
+    }
 }
