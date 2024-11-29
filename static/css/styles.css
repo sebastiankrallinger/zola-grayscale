@@ -4297,6 +4297,17 @@ fieldset:disabled .btn {
   border: var(--bs-card-border-width) solid var(--bs-card-border-color);
   border-radius: var(--bs-card-border-radius);
 }
+
+.about-section img {
+  width: 200px; 
+  height: 200px; 
+  border-radius: 50%; 
+  object-fit: cover; 
+  margin-left: auto; 
+  margin-right: auto; 
+  margin-bottom: 10px;
+}
+
 .card > hr {
   margin-right: 0;
   margin-left: 0;
